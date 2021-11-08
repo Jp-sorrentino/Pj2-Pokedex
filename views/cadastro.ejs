@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="/img/pokebola.ico" rel="icon" type="image/x-icon" />
+    <title>Pokédex</title>
+</head>
+
+<body>
+    <nav>
+        <img src="/img/pokedex.png" class="img" alt="Pokédex Logo">
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/cadastro">Register Poke</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <section class="main-class-cadastro">
+        <form action="/receiveinfo" method="POST">
+            <h2><a href="https://www.pokemon.com/br/pokedex/" target="__blank">INSERT DATA</a></h2>
+
+            <section class="form-control">
+                <label for="Foto: "></label>
+                <input type="text" name="poke_photo" id="photo" placeholder="Pokemon image URL" required>
+            </section>
+
+            <section class="form-control">
+                <label for="Nome: "></label>
+                <input type="text" name="poke_name" id="name" placeholder="Pokemon name" required>
+            </section>
+
+            <section class="form-control">
+                <label for="Número:"></label>
+                <input type="text" name="poke_number" id="number" placeholder="Pokemon number" required>
+            </section>
+                
+            <section class="form-control">
+                <label for="Tipo:"></label>
+                <input type="text" name="poke_type" id="type" placeholder="Pokemon type" required>
+            </section>
+
+            <section class="form-control">
+                <label for="Categoria:"></label>
+                <input type="text" name="poke_category" id="category" placeholder="Pokemon category" required>
+            </section>
+
+            <section class="form-control">
+                <label for="Altura:"></label>
+                <input type="text" name="poke_height" id="height" placeholder="Pokemon height" required>
+            </section>
+
+            <section class="form-control">
+                <label for="Peso:"></label>
+                <input type="text" name="poke_category" id="weight" placeholder="Pokemon weight" required>
+            </section>
+
+            <section class="form-control">
+                <label for="Descrição:"></label>
+                <input type="text" name="poke_description" id="description" placeholder="Pokemon description" required>
+            </section>
+            
+            <button type="submit" class="button">Add Pokemon</button>
+        </form>
+    </section>
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>

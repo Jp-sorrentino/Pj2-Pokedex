@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="/img/pokebola.ico" rel="icon" type="image/x-icon" />
+    <title>Pokédex</title>
+</head>
+
+<body>
+    <nav>
+        <img src="/img/pokedex.png" class="img" alt="Pokédex Logo">
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/cadastro">Register Poke</a>
+            </li>
+        </ul>
+    </nav>
+
+    <% if(message != "") {  %>
+        <section class="message">
+            <p><%= message %></p> <span class="close">&times;</span>
+        </section>
+    <% }  %>
+
+    <main class="index">
+        <% pokedex.forEach((pokedex, find) => { %>
+            <section class="wrapper">
+                <article class="card_content">
+                    <a href="/detalhes/<%= find %>"><img class="img" src="<%= pokedex.photo %>"></a>
+                    <p class="name"> <%= pokedex.name %></p>
+                    <p class="type"> <%= pokedex.type %></p>
+                </article>
+            </section>
+        <% }) %>
+    </main>
+          
+    <script src="/js/script.js"></script>
+    
+</body>
+</html>
